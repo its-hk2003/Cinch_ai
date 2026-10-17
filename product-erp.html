@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cinch.AI ERP — Complete Operations for Service Businesses</title>
+<meta name="description" content="Jobs, billing, payroll, inventory, technician portal, 17 live reports. Go live in 5 days.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.hero-erp{padding:140px 0 80px;background:var(--bg)}
+.erp-hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.module-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:0}
+.module-card{padding:16px;border-radius:12px;background:var(--card);border:1px solid var(--border)}
+.module-card strong{display:block;font-size:12px;font-weight:700;color:var(--lime);margin-bottom:3px;font-family:var(--fh)}
+.module-card span{font-size:11px;color:var(--gray2)}
+.deep-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;margin-top:40px}
+.deep-card{padding:28px;border-radius:16px;background:var(--card);border:1px solid var(--border);transition:all .3s}
+.deep-card:hover{border-color:var(--border-h);transform:translateY(-4px)}
+.deep-card .di{width:42px;height:42px;border-radius:11px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;background:var(--lime-glow);border:1px solid rgba(163,230,53,.15)}
+.deep-card .di svg{width:20px;height:20px}
+.deep-card h4{font-family:var(--fh);font-size:15px;font-weight:700;margin-bottom:8px}
+.deep-card ul{list-style:none;display:flex;flex-direction:column;gap:6px}
+.deep-card ul li{font-size:12px;color:var(--gray);display:flex;align-items:flex-start;gap:7px}
+.deep-card ul li::before{content:'→';color:var(--lime);font-size:10px;flex-shrink:0;margin-top:2px}
+.spec-table{width:100%;border-collapse:collapse;margin-top:32px}
+.spec-table tr{border-bottom:1px solid var(--border)}
+.spec-table td{padding:14px 18px;font-size:13px}
+.spec-table td:first-child{color:var(--gray2);font-family:var(--fm);font-size:11px;width:30%}
+.spec-table td:last-child{color:var(--white)}
+@media(max-width:1024px){
+  .erp-hero-grid{grid-template-columns:1fr}
+  .deep-grid{grid-template-columns:1fr}
+}
+@media(max-width:640px){.module-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<canvas id="bg-canvas"></canvas>
+<div class="toast" id="toast"></div>
+<a class="qc-btn" href="https://wa.me/918426975309?text=Hi%2C%20I%20want%20to%20know%20more%20about%20Cinch.AI%20ERP." target="_blank" rel="noopener">
+  <div class="qc-ping"></div>
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.137.564 4.14 1.543 5.873L.057 23.5a.5.5 0 0 0 .609.61l5.801-1.525A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.651-.51-5.17-1.399l-.371-.22-3.844 1.01 1.024-3.744-.24-.386A9.953 9.953 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+  <span>Quick Connect</span>
+</a>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <svg width="32" height="32" viewBox="0 0 100 100" fill="none"><rect width="100" height="100" rx="22" fill="#06080f"/><path d="M50 10 L82 28 L82 66 L50 84 L18 66 L18 28 Z" stroke="#a3e635" stroke-width="1.8" fill="none" opacity=".4"/><path d="M36 36 C36 28 43 25 50 29 C57 33 64 31 64 23" stroke="#a3e635" stroke-width="3.5" stroke-linecap="round" fill="none"/><path d="M64 64 C64 72 57 75 50 71 C43 67 36 69 36 77" stroke="#a3e635" stroke-width="3.5" stroke-linecap="round" fill="none"/><line x1="36" y1="36" x2="64" y2="64" stroke="#a3e635" stroke-width="2" stroke-linecap="round" opacity=".35"/><circle cx="64" cy="23" r="5.5" fill="#a3e635"/><circle cx="36" cy="77" r="5.5" fill="#38bdf8"/><circle cx="50" cy="50" r="3.2" fill="#f8fafc" opacity=".5"/></svg>
+      <div class="brand-text"><div class="brand-name">Cinch<span>.ai</span></div><div class="brand-tag">Vision Into Power</div></div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <div class="ndrop">
+        <span class="ndrop-lbl">Products ▾</span>
+        <div class="ndrop-menu">
+          <a href="product-erp.html"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#a3e635" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>ERP</a>
+          <a href="index.html#products"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2"><circle cx="12" cy="12" r="3"/></svg>Service AI<span class="soon">Soon</span></a>
+          <a href="index.html#products"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>AI Automation<span class="soon">Soon</span></a>
+        </div>
+      </div>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a href="demo.html" class="btn btn-l" style="padding:9px 20px;font-size:12px">Register for Demo</a>
+    </div>
+    <div class="mob-tog" onclick="toggleMob()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="mob-menu" id="mobMenu">
+  <span class="mob-close" onclick="toggleMob()">✕</span>
+  <a href="index.html" onclick="toggleMob()">Home</a>
+  <a href="product-erp.html" onclick="toggleMob()">ERP</a>
+  <a href="pricing.html" onclick="toggleMob()">Pricing</a>
+  <a href="about.html" onclick="toggleMob()">About</a>
+  <a href="contact.html" onclick="toggleMob()">Contact</a>
+  <a href="demo.html" onclick="toggleMob()" style="color:var(--lime)">Register for Demo →</a>
+</div>
+
+<!-- HERO -->
+<section class="hero-erp">
+  <div class="wrap">
+    <a href="index.html" style="display:inline-flex;align-items:center;gap:7px;font-size:12px;color:var(--gray);margin-bottom:28px;transition:color .2s;font-family:var(--fm)" onmouseover="this.style.color='var(--lime)'" onmouseout="this.style.color='var(--gray)'">← Back to home</a>
+    <div class="erp-hero-grid">
+      <div>
+        <span class="tag tl" style="margin-bottom:16px">Live Now</span>
+        <h1 style="font-family:var(--fh);font-size:48px;font-weight:800;letter-spacing:-2px;line-height:1.08;margin-bottom:16px" class="rev">Cinch.AI <span style="color:var(--lime)">ERP</span></h1>
+        <p style="font-size:16px;color:var(--gray);line-height:1.8;margin-bottom:28px" class="rev d1">The complete operations backbone for your service business. From the moment a call comes in to the second the invoice is paid — one connected system manages everything. No paper. No WhatsApp chaos.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap" class="rev d2">
+          <a href="demo.html" class="btn btn-l">Register for Demo →</a>
+          <a href="pricing.html" class="btn btn-o">See Pricing</a>
+        </div>
+      </div>
+      <div class="module-grid rev-r">
+        <div class="module-card"><strong>Job Management</strong><span>Kanban, auto-assign, alerts</span></div>
+        <div class="module-card"><strong>GST Billing</strong><span>One-click from job close</span></div>
+        <div class="module-card"><strong>Technician Portal</strong><span>Any phone browser, no app</span></div>
+        <div class="module-card"><strong>Payroll</strong><span>PF/ESIC, 30-min monthly</span></div>
+        <div class="module-card"><strong>Inventory & PO</strong><span>Parts, low-stock, purchase</span></div>
+        <div class="module-card"><strong>17 Live Reports</strong><span>Revenue, performance, KPIs</span></div>
+        <div class="module-card"><strong>Client & AMC</strong><span>Contracts, renewals, history</span></div>
+        <div class="module-card"><strong>2FA Security</strong><span>Role-based access control</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES DEEP DIVE -->
+<section class="s-dark">
+  <div class="wrap">
+    <span class="tag tl rev" style="margin-bottom:14px">Feature deep dive</span>
+    <h2 class="st rev d1">Every module. <span class="hi">Every detail.</span></h2>
+    <div class="deep-grid">
+      <div class="deep-card rev">
+        <div class="di"><svg viewBox="0 0 24 24" fill="none" stroke="#a3e635" stroke-width="1.8" stroke-linecap="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+        <h4>Job Management</h4>
+        <ul>
+          <li>Create jobs with auto-numbered IDs</li>
+          <li>Kanban board — Open, In Progress, Done, Invoiced</li>
+          <li>Assign to technicians with skill matching</li>
+          <li>Overdue alerts and priority flags</li>
+          <li>Full job history and audit trail</li>
+          <li>AMC job auto-scheduling</li>
+        </ul>
+      </div>
+      <div class="deep-card rev d1">
+        <div class="di" style="background:var(--cyan-dim);border-color:rgba(56,189,248,.15)"><svg viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
+        <h4>Technician Portal</h4>
+        <ul>
+          <li>Works on any Android or iPhone browser</li>
+          <li>View assigned jobs and customer details</li>
+          <li>Check-in / check-out with time log</li>
+          <li>Add notes, photos, and part usage from site</li>
+          <li>Update job status in real-time</li>
+          <li>No app download required</li>
+        </ul>
+      </div>
+      <div class="deep-card rev d2">
+        <div class="di"><svg viewBox="0 0 24 24" fill="none" stroke="#a3e635" stroke-width="1.8" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+        <h4>GST Billing</h4>
+        <ul>
+          <li>One-click invoice from any completed job</li>
+          <li>GST auto-calculated (CGST, SGST, IGST)</li>
+          <li>Send via email directly from the system</li>
+          <li>Record full and partial payments</li>
+          <li>Overdue payment tracking and reminders</li>
+          <li>Books updated instantly on payment</li>
+        </ul>
+      </div>
+      <div class="deep-card rev d3">
+        <div class="di" style="background:var(--cyan-dim);border-color:rgba(56,189,248,.15)"><svg viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+        <h4>Payroll & Compliance</h4>
+        <ul>
+          <li>Salary structures with allowances</li>
+          <li>Attendance and leave management</li>
+          <li>One-click monthly payroll run</li>
+          <li>PF and ESIC challan auto-generated</li>
+          <li>Bank transfer file export</li>
+          <li>Done in under 30 minutes</li>
+        </ul>
+      </div>
+      <div class="deep-card rev">
+        <div class="di"><svg viewBox="0 0 24 24" fill="none" stroke="#a3e635" stroke-width="1.8" stroke-linecap="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
+        <h4>Inventory & Purchase Orders</h4>
+        <ul>
+          <li>Track all parts and stock levels</li>
+          <li>Low-stock alerts by location</li>
+          <li>Technicians request parts from site</li>
+          <li>Purchase orders created and tracked</li>
+          <li>Parts auto-deducted on job close</li>
+          <li>Vendor management and history</li>
+        </ul>
+      </div>
+      <div class="deep-card rev d1">
+        <div class="di" style="background:var(--cyan-dim);border-color:rgba(56,189,248,.15)"><svg viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+        <h4>17 Live Reports</h4>
+        <ul>
+          <li>Revenue by month, client, technician</li>
+          <li>Overdue jobs and SLA compliance</li>
+          <li>Technician performance scorecard</li>
+          <li>Collection rate and outstanding aging</li>
+          <li>Expense summary and parts usage</li>
+          <li>CSV export for all reports</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON -->
+<section>
+  <div class="wrap">
+    <span class="tag tl rev" style="margin-bottom:14px">Comparison</span>
+    <h2 class="st rev d1">Cinch.AI ERP vs <span class="hi">what you use today</span></h2>
+    <div class="comp-wrap rev">
+      <table class="comp-table">
+        <thead><tr><th>Capability</th><th>Paper / WhatsApp</th><th>Excel / Tally</th><th>Cinch.AI ERP</th></tr></thead>
+        <tbody>
+          <tr><td>Job management & tracking</td><td class="no-val">None</td><td class="no-val">None</td><td class="hi-val">✓ Full Kanban board</td></tr>
+          <tr><td>Real-time field updates</td><td class="no-val">None</td><td class="no-val">None</td><td class="hi-val">✓ Technician portal</td></tr>
+          <tr><td>GST invoice generation</td><td class="no-val">Manual Word/WA</td><td class="ok">Basic</td><td class="hi-val">✓ One-click from job</td></tr>
+          <tr><td>Payroll + PF/ESIC</td><td class="no-val">Manual</td><td class="ok">Basic</td><td class="hi-val">✓ 30-minute payroll</td></tr>
+          <tr><td>Inventory & parts tracking</td><td class="no-val">None</td><td class="no-val">None</td><td class="hi-val">✓ Full module</td></tr>
+          <tr><td>Client & AMC management</td><td class="no-val">None</td><td class="no-val">None</td><td class="hi-val">✓ Built-in</td></tr>
+          <tr><td>Live business dashboard</td><td class="no-val">None</td><td class="no-val">Static files</td><td class="hi-val">✓ 17 live reports</td></tr>
+          <tr><td>Multi-user access</td><td class="no-val">None</td><td class="ok">Limited</td><td class="hi-val">✓ Role-based access</td></tr>
+          <tr><td>Mobile field access</td><td class="no-val">None</td><td class="no-val">None</td><td class="hi-val">✓ Any smartphone</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ONBOARDING TIMELINE -->
+<section class="s-dark">
+  <div class="wrap ctr">
+    <span class="tag tc rev" style="margin-bottom:14px">Go live fast</span>
+    <h2 class="st rev d1">Live in <span class="hi">5 days.</span> We handle everything.</h2>
+    <div class="tl-wrap">
+      <div class="tl-step rev"><div class="tl-dot"></div><div class="tl-day">Day 1</div><div class="tl-title">Account setup</div><div class="tl-desc">Company, users, tax config</div></div>
+      <div class="tl-step rev d1"><div class="tl-dot"></div><div class="tl-day">Day 2</div><div class="tl-title">Data migration</div><div class="tl-desc">Clients, vendors, employees</div></div>
+      <div class="tl-step rev d2"><div class="tl-dot"></div><div class="tl-day">Day 3</div><div class="tl-title">Team training</div><div class="tl-desc">Walkthrough for every role</div></div>
+      <div class="tl-step rev d3"><div class="tl-dot"></div><div class="tl-day">Day 4</div><div class="tl-title">Tech portal setup</div><div class="tl-desc">Technician logins & phones</div></div>
+      <div class="tl-step rev d4"><div class="tl-dot"></div><div class="tl-day">Day 5</div><div class="tl-title">First live job</div><div class="tl-desc">Assignment to invoice</div></div>
+    </div>
+    <p class="rev" style="margin-top:24px;font-size:13px;color:var(--gray)">30 days of priority support after go-live. Any issue — fixed same day.</p>
+  </div>
+</section>
+
+<!-- SPECS -->
+<section>
+  <div class="wrap">
+    <span class="tag tl rev" style="margin-bottom:14px">Technical specs</span>
+    <h2 class="st rev d1">What's under the <span class="hi">hood.</span></h2>
+    <table class="spec-table rev">
+      <tr><td>Access</td><td>Web browser — any device, any OS. No install required.</td></tr>
+      <tr><td>Mobile</td><td>Technician portal optimised for smartphone browsers. Native app in Enterprise (Q3 2027).</td></tr>
+      <tr><td>Data location</td><td>AWS Mumbai (ap-south-1) — 100% India. 256-bit SSL/TLS encryption.</td></tr>
+      <tr><td>Uptime</td><td>99.9% target. Planned maintenance communicated 24hrs in advance.</td></tr>
+      <tr><td>Backups</td><td>Daily automated backups. Enterprise gets dedicated database + cloud backup.</td></tr>
+      <tr><td>Compliance</td><td>India DPDP Act 2023. GST-compliant invoicing. PF/ESIC challan generation.</td></tr>
+      <tr><td>Security</td><td>2FA (Business+), role-based access control, audit logs on all actions.</td></tr>
+      <tr><td>Support</td><td>WhatsApp + email. First 30 days: same-day issue resolution. Business: priority support.</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="background:linear-gradient(135deg,rgba(163,230,53,.06),rgba(56,189,248,.04));border-top:1px solid var(--border)">
+  <div class="wrap ctr">
+    <h2 class="st rev" style="font-size:36px">Start your <span class="hi">free 7-day trial</span> today.</h2>
+    <p class="sd rev d1" style="margin:12px auto 32px">No credit card. No auto-charge. Our founder personally onboards every client.</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap" class="rev d2">
+      <a href="demo.html" class="btn btn-l" style="font-size:15px;padding:15px 32px">Register for Demo →</a>
+      <a href="pricing.html" class="btn btn-o">View Pricing</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px">
+          <svg width="28" height="28" viewBox="0 0 100 100" fill="none"><rect width="100" height="100" rx="22" fill="#06080f"/><path d="M36 36 C36 28 43 25 50 29 C57 33 64 31 64 23" stroke="#a3e635" stroke-width="3.5" stroke-linecap="round" fill="none"/><path d="M64 64 C64 72 57 75 50 71 C43 67 36 69 36 77" stroke="#a3e635" stroke-width="3.5" stroke-linecap="round" fill="none"/><circle cx="64" cy="23" r="5.5" fill="#a3e635"/><circle cx="36" cy="77" r="5.5" fill="#38bdf8"/></svg>
+          <span style="font-family:var(--fh);font-weight:800;font-size:18px">Cinch<span style="color:var(--lime)">.ai</span></span>
+        </div>
+        <div style="font-size:9px;color:var(--gray2);letter-spacing:3px;text-transform:uppercase;font-family:var(--fm);opacity:.6">VISION INTO POWER</div>
+        <p style="font-size:12px;color:var(--gray2);margin-top:10px;line-height:1.7;max-width:260px">All-in-one ERP for service, repair, AMC and maintenance businesses across India.</p>
+      </div>
+      <div class="foot-col"><h5>Product</h5><a href="product-erp.html">ERP</a><a href="pricing.html">Pricing</a><a href="demo.html">Free Trial</a></div>
+      <div class="foot-col"><h5>Company</h5><a href="about.html">About Us</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms</a></div>
+      <div class="foot-col"><h5>Contact</h5><div class="foot-addr"><a href="mailto:hemrajkmt2576606@gmail.com" style="color:var(--lime)">hemrajkmt2576606@gmail.com</a><br><a href="https://wa.me/918426975309" target="_blank" style="color:var(--lime)">+91 84269 75309</a><br>Dadar, Mumbai — 400014</div></div>
+    </div>
+    <div class="foot-bottom"><span>© 2025 Cinch.AI. All rights reserved.</span><span>Built in Mumbai 🇮🇳</span></div>
+  </div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>

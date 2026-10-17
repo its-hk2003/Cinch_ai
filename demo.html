@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Register for Demo — Cinch.AI ERP</title>
+<meta name="description" content="Book a live demo with our founder. 30 minutes. Your industry's data. 7-day free trial with no credit card.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.demo-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:56px;align-items:start;margin-top:48px}
+.perk-item{display:flex;align-items:flex-start;gap:14px;margin-bottom:20px;padding:18px;border-radius:12px;background:var(--card);border:1px solid var(--border);transition:all .3s}
+.perk-item:hover{border-color:var(--border-h)}
+.perk-icon{width:36px;height:36px;border-radius:9px;background:var(--lime-glow);border:1px solid rgba(163,230,53,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.perk-icon svg{width:16px;height:16px;stroke:var(--lime)}
+.perk-title{font-size:13px;font-weight:700;color:var(--white);margin-bottom:3px;font-family:var(--fh)}
+.perk-desc{font-size:12px;color:var(--gray2);line-height:1.5}
+@media(max-width:1024px){.demo-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<canvas id="bg-canvas"></canvas>
+<div class="toast" id="toast"></div>
+<a class="qc-btn" href="https://wa.me/918426975309?text=Hi%2C%20I%20want%20to%20book%20a%20demo%20for%20Cinch.AI." target="_blank" rel="noopener">
+  <div class="qc-ping"></div>
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.137.564 4.14 1.543 5.873L.057 23.5a.5.5 0 0 0 .609.61l5.801-1.525A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.651-.51-5.17-1.399l-.371-.22-3.844 1.01 1.024-3.744-.24-.386A9.953 9.953 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+  <span>Quick Connect</span>
+</a>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <svg width="32" height="32" viewBox="0 0 100 100" fill="none"><rect width="100" height="100" rx="22" fill="#06080f"/><path d="M50 10 L82 28 L82 66 L50 84 L18 66 L18 28 Z" stroke="#a3e635" stroke-width="1.8" fill="none" opacity=".4"/><path d="M36 36 C36 28 43 25 50 29 C57 33 64 31 64 23" stroke="#a3e635" stroke-width="3.5" stroke-linecap="round" fill="none"/><path d="M64 64 C64 72 57 75 50 71 C43 67 36 69 36 77" stroke="#a3e635" stroke-width="3.5" stroke-linecap="round" fill="none"/><line x1="36" y1="36" x2="64" y2="64" stroke="#a3e635" stroke-width="2" stroke-linecap="round" opacity=".35"/><circle cx="64" cy="23" r="5.5" fill="#a3e635"/><circle cx="36" cy="77" r="5.5" fill="#38bdf8"/><circle cx="50" cy="50" r="3.2" fill="#f8fafc" opacity=".5"/></svg>
+      <div class="brand-text"><div class="brand-name">Cinch<span>.ai</span></div><div class="brand-tag">Vision Into Power</div></div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <div class="ndrop"><span class="ndrop-lbl">Products ▾</span><div class="ndrop-menu"><a href="product-erp.html"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#a3e635" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>ERP</a></div></div>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a href="demo.html" class="btn btn-l active" style="padding:9px 20px;font-size:12px">Register for Demo</a>
+    </div>
+    <div class="mob-tog" onclick="toggleMob()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="mob-menu" id="mobMenu">
+  <span class="mob-close" onclick="toggleMob()">✕</span>
+  <a href="index.html" onclick="toggleMob()">Home</a>
+  <a href="product-erp.html" onclick="toggleMob()">ERP</a>
+  <a href="pricing.html" onclick="toggleMob()">Pricing</a>
+  <a href="about.html" onclick="toggleMob()">About</a>
+  <a href="contact.html" onclick="toggleMob()">Contact</a>
+  <a href="demo.html" onclick="toggleMob()" style="color:var(--lime)">Register for Demo →</a>
+</div>
+
+<section style="padding-top:140px;padding-bottom:80px">
+  <div class="wrap">
+    <span class="tag tl rev" style="margin-bottom:14px">Free Demo</span>
+    <h1 class="st rev d1" style="font-size:44px">See Cinch.AI <span class="hi">built for your business.</span></h1>
+    <p class="sd rev d2">Our founder personally demos the ERP using your industry's data. 30 minutes. No sales pressure. Just the product.</p>
+
+    <div class="demo-grid">
+      <!-- Left: perks -->
+      <div>
+        <div class="perk-item rev">
+          <div class="perk-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div><div class="perk-title">Response in 4 hours</div><div class="perk-desc">Submit the form and our team reaches out same day to schedule your demo.</div></div>
+        </div>
+        <div class="perk-item rev d1">
+          <div class="perk-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+          <div><div class="perk-title">Founder-led demo</div><div class="perk-desc">Not a sales rep. The founder shows you the product personally and answers every technical question.</div></div>
+        </div>
+        <div class="perk-item rev d2">
+          <div class="perk-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+          <div><div class="perk-title">Your industry's data</div><div class="perk-desc">We demo using scenarios from your specific industry. Not a generic walkthrough.</div></div>
+        </div>
+        <div class="perk-item rev d3">
+          <div class="perk-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <div><div class="perk-title">7-day free trial after</div><div class="perk-desc">No credit card. Your account set up with your real data. 30-day priority support included.</div></div>
+        </div>
+
+        <!-- Founding offer reminder -->
+        <div style="margin-top:8px;padding:20px;border-radius:14px;background:rgba(163,230,53,.04);border:1px solid rgba(163,230,53,.18)" class="rev d4">
+          <div style="font-size:11px;color:var(--lime);font-weight:600;font-family:var(--fm);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">⭐ Founding Partner — 3 spots left</div>
+          <div style="font-family:var(--fm);font-size:28px;font-weight:600;margin-bottom:4px">₹1,499 <span style="font-size:13px;color:var(--gray);font-weight:400">first month</span></div>
+          <div style="font-size:12px;color:var(--gray);margin-bottom:10px">Then ₹1,999/month · 7-day trial included</div>
+          <div style="display:flex;flex-wrap:wrap;gap:10px">
+            <span style="font-size:11px;color:var(--green)">✓ Full ERP access</span>
+            <span style="font-size:11px;color:var(--green)">✓ Personal onboarding</span>
+            <span style="font-size:11px;color:var(--green)">✓ Shape the roadmap</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: form -->
+      <div class="cf-form rev-r">
+        <h3 style="font-family:var(--fh);font-size:18px;font-weight:700;margin-bottom:6px">Register for a live demo</h3>
+        <p style="font-size:13px;color:var(--gray);margin-bottom:24px">We'll reach out within 4 business hours to schedule.</p>
+        <div class="f2">
+          <div class="fg"><label>First Name *</label><input id="d-fn" type="text" placeholder="Hemraj"></div>
+          <div class="fg"><label>Last Name</label><input id="d-ln" type="text" placeholder="Kumawat"></div>
+        </div>
+        <div class="f2">
+          <div class="fg"><label>Work Email *</label><input id="d-em" type="email" placeholder="you@company.com"></div>
+          <div class="fg"><label>WhatsApp / Phone *</label><input id="d-ph" type="tel" placeholder="+91 8426975309"></div>
+        </div>
+        <div class="fg"><label>Company Name *</label><input id="d-co" type="text" placeholder="ABC Services Pvt Ltd"></div>
+        <div class="f2">
+          <div class="fg">
+            <label>Industry</label>
+            <select id="d-in">
+              <option value="AMC / Maintenance contracts">AMC / Maintenance contracts</option>
+              <option value="CCTV & Security systems">CCTV & Security systems</option>
+              <option value="Elevator & Lift service">Elevator & Lift service</option>
+              <option value="IT services & support">IT services & support</option>
+              <option value="Generator & DG service">Generator & DG service</option>
+              <option value="Fire & Safety">Fire & Safety</option>
+              <option value="Electrical services">Electrical services</option>
+              <option value="Medical equipment service">Medical equipment service</option>
+              <option value="Plumbing & civil">Plumbing & civil</option>
+              <option value="Other service business">Other service business</option>
+            </select>
+          </div>
+          <div class="fg">
+            <label>Team Size</label>
+            <select id="d-sz">
+              <option value="1–5 people">1–5 people</option>
+              <option value="6–12 people">6–12 people</option>
+              <option value="13–30 people">13–30 people</option>
+              <option value="30+ people">30+ people</option>
+            </select>
+          </div>
+        </div>
+        <div class="fg">
+          <label>Current System</label>
+          <select id="d-cs">
+            <option value="WhatsApp / phone calls">WhatsApp / phone calls</option>
+            <option value="Paper / notebooks">Paper / notebooks</option>
+            <option value="Excel / Google Sheets">Excel / Google Sheets</option>
+            <option value="Tally">Tally</option>
+            <option value="Another ERP">Another ERP</option>
+          </select>
+        </div>
+        <div class="fg"><label>Anything specific you want to see?</label><textarea id="d-ms" rows="3" placeholder="e.g. How does payroll work? Can I import our existing client list?"></textarea></div>
+        <button class="f-sub" onclick="submitDemo()">Register for Demo →</button>
+        <p style="font-size:11px;color:var(--gray2);margin-top:12px;text-align:center">No credit card. No auto-charge. We'll never spam you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TRIAL WORKS -->
+<section class="s-dark">
+  <div class="wrap ctr">
+    <h2 class="st rev d1">What happens <span class="hi">after you register.</span></h2>
+    <div class="trial-grid">
+      <div class="trial-step rev"><div class="trial-num">1</div><h5>We reach out</h5><p>Within 4 business hours via WhatsApp or email to schedule your demo.</p></div>
+      <div class="trial-step rev d1"><div class="trial-num">2</div><h5>30-min live demo</h5><p>Founder shows the ERP using your industry's scenarios. Full Q&A included.</p></div>
+      <div class="trial-step rev d2"><div class="trial-num">3</div><h5>Trial setup</h5><p>If you're interested, we set up your account with your actual data in 24 hours.</p></div>
+      <div class="trial-step rev d3"><div class="trial-num">4</div><h5>7 days free</h5><p>Use the full ERP for real work. No card. No obligation. Walk away anytime.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand"><div style="display:flex;align-items:center;gap:10px;margin-bottom:6px"><svg width="28" height="28" viewBox="0 0 100 100" fill="none"><rect width="100" height="100" rx="22" fill="#06080f"/><path d="M36 36 C36 28 43 25 50 29 C57 33 64 31 64 23" stroke="#a3e635" stroke-width="3.5" stroke-linecap="round" fill="none"/><path d="M64 64 C64 72 57 75 50 71 C43 67 36 69 36 77" stroke="#a3e635" stroke-width="3.5" stroke-linecap="round" fill="none"/><circle cx="64" cy="23" r="5.5" fill="#a3e635"/><circle cx="36" cy="77" r="5.5" fill="#38bdf8"/></svg><span style="font-family:var(--fh);font-weight:800;font-size:18px">Cinch<span style="color:var(--lime)">.ai</span></span></div><p style="font-size:12px;color:var(--gray2);margin-top:10px;line-height:1.7;max-width:260px">All-in-one ERP for service, repair, AMC and maintenance businesses across India.</p></div>
+      <div class="foot-col"><h5>Product</h5><a href="product-erp.html">ERP</a><a href="pricing.html">Pricing</a><a href="demo.html">Free Trial</a></div>
+      <div class="foot-col"><h5>Company</h5><a href="about.html">About Us</a><a href="contact.html">Contact</a><a href="privacy-policy.html">Privacy Policy</a><a href="terms-of-service.html">Terms</a></div>
+      <div class="foot-col"><h5>Contact</h5><div class="foot-addr"><a href="mailto:hemrajkmt2576606@gmail.com" style="color:var(--lime)">hemrajkmt2576606@gmail.com</a><br><a href="https://wa.me/918426975309" target="_blank" style="color:var(--lime)">+91 84269 75309</a><br>Dadar, Mumbai — 400014</div></div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 Cinch.AI. All rights reserved.</span><span>Built in Mumbai 🇮🇳</span></div>
+  </div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>

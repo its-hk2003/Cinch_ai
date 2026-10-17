@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>About Us — Cinch.AI</title>
+<meta name="description" content="We built Cinch.AI because we watched service businesses fail at operations — not because they lacked skill, but because they lacked the right tools.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+.value-card{padding:28px;border-radius:16px;background:var(--card);border:1px solid var(--border);transition:all .3s}
+.value-card:hover{border-color:var(--border-h);transform:translateY(-4px)}
+.value-card .vi{width:44px;height:44px;border-radius:12px;background:var(--lime-glow);border:1px solid rgba(163,230,53,.15);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.value-card .vi svg{width:20px;height:20px;stroke:var(--lime)}
+.value-card h4{font-family:var(--fh);font-size:15px;font-weight:700;margin-bottom:8px}
+.value-card p{font-size:13px;color:var(--gray);line-height:1.7}
+.rm-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:40px}
+.rm-card{padding:24px;border-radius:14px;background:var(--card);border:1px solid var(--border);transition:all .3s}
+.rm-card:hover{border-color:var(--border-h)}
+.rm-q{font-size:11px;font-weight:600;font-family:var(--fm);color:var(--cyan);background:var(--cyan-dim);border:1px solid rgba(56,189,248,.12);padding:3px 10px;border-radius:6px;display:inline-block;margin-bottom:10px}
+.rm-card h5{font-family:var(--fh);font-size:14px;font-weight:700;margin-bottom:6px}
+.rm-card p{font-size:12px;color:var(--gray2);line-height:1.6}
+@media(max-width:1024px){.value-grid{grid-template-columns:1fr 1fr}.rm-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.value-grid,.rm-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<canvas id="bg-canvas"></canvas>
+<div class="toast" id="toast"></div>
+<a class="qc-btn" href="https://wa.me/918426975309?text=Hi%2C%20I%20saw%20Cinch.AI%20and%20want%20to%20know%20more." target="_blank" rel="noopener">
+  <div class="qc-ping"></div>
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.137.564 4.14 1.543 5.873L.057 23.5a.5.5 0 0 0 .609.61l5.801-1.525A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.651-.51-5.17-1.399l-.371-.22-3.844 1.01 1.024-3.744-.24-.386A9.953 9.953 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+  <span>Quick Connect</span>
+</a>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <svg width="32" height="32" viewBox="0 0 100 100" fill="none"><rect width="100" height="100" rx="22" fill="#06080f"/><path d="M50 10 L82 28 L82 66 L50 84 L18 66 L18 28 Z" stroke="#a3e635" stroke-width="1.8" fill="none" opacity=".4"/><path d="M36 36 C36 28 43 25 50 29 C57 33 64 31 64 23" stroke="#a3e635" stroke-width="3.5" stroke-linecap="round" fill="none"/><path d="M64 64 C64 72 57 75 50 71 C43 67 36 69 36 77" stroke="#a3e635" stroke-width="3.5" stroke-linecap="round" fill="none"/><line x1="36" y1="36" x2="64" y2="64" stroke="#a3e635" stroke-width="2" stroke-linecap="round" opacity=".35"/><circle cx="64" cy="23" r="5.5" fill="#a3e635"/><circle cx="36" cy="77" r="5.5" fill="#38bdf8"/><circle cx="50" cy="50" r="3.2" fill="#f8fafc" opacity=".5"/></svg>
+      <div class="brand-text"><div class="brand-name">Cinch<span>.ai</span></div><div class="brand-tag">Vision Into Power</div></div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <div class="ndrop"><span class="ndrop-lbl">Products ▾</span><div class="ndrop-menu"><a href="product-erp.html"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#a3e635" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>ERP</a></div></div>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html" class="active">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a href="demo.html" class="btn btn-l" style="padding:9px 20px;font-size:12px">Register for Demo</a>
+    </div>
+    <div class="mob-tog" onclick="toggleMob()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="mob-menu" id="mobMenu">
+  <span class="mob-close" onclick="toggleMob()">✕</span>
+  <a href="index.html" onclick="toggleMob()">Home</a>
+  <a href="product-erp.html" onclick="toggleMob()">ERP</a>
+  <a href="pricing.html" onclick="toggleMob()">Pricing</a>
+  <a href="about.html" onclick="toggleMob()">About</a>
+  <a href="contact.html" onclick="toggleMob()">Contact</a>
+  <a href="demo.html" onclick="toggleMob()" style="color:var(--lime)">Register for Demo →</a>
+</div>
+
+<!-- FOUNDER STORY -->
+<section style="padding-top:140px">
+  <div class="wrap">
+    <div style="display:grid;grid-template-columns:1fr 1.1fr;gap:64px;align-items:center">
+      <div>
+        <span class="tag tl rev" style="margin-bottom:16px">Our Story</span>
+        <h1 class="st rev d1" style="font-size:44px">We built <span class="hi">what service businesses actually needed.</span></h1>
+        <p style="font-size:16px;color:var(--gray);line-height:1.85;margin-top:20px;margin-bottom:20px" class="rev d2">Service businesses across India — repair shops, AMC providers, security companies, elevator services — were losing money every single month. Not because they were bad at their trade. Because they were running on WhatsApp and Excel.</p>
+        <p style="font-size:16px;color:var(--gray);line-height:1.85;margin-bottom:28px" class="rev d3">Invoices going out 5 days late. AMC contracts expiring without a call. Payroll taking a weekend. Technicians getting the wrong jobs. Nobody able to answer the simple question: "How much did we make this month?"</p>
+        <p style="font-size:16px;color:var(--lime);line-height:1.85;font-style:italic" class="rev d4">"We built Cinch.AI because we watched this happen — and decided the solution had to be built specifically for how service businesses operate. Not adapted from something else."</p>
+      </div>
+      <div class="rev-r">
+        <div style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:36px;position:relative;overflow:hidden">
+          <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--lime),var(--cyan))"></div>
+          <div style="width:56px;height:56px;border-radius:50%;background:var(--lime-glow);border:2px solid rgba(163,230,53,.25);display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-size:22px;font-weight:800;color:var(--lime);margin-bottom:20px">H</div>
+          <h3 style="font-family:var(--fh);font-size:20px;font-weight:800;margin-bottom:4px">Hemraj</h3>
+          <p style="font-size:12px;color:var(--lime);font-family:var(--fm);margin-bottom:20px">Founder & CEO, Cinch.AI</p>
+          <p style="font-size:14px;color:var(--gray);line-height:1.8;margin-bottom:20px">Full-stack developer. Built ServicePro ERP from the ground up after seeing the operational chaos in India's service industry firsthand.</p>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div style="display:flex;align-items:center;gap:10px;font-size:12px;color:var(--gray2)">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--lime)" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Built on DJango, Django REST Framework, React, PostgreSQL
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;font-size:12px;color:var(--gray2)">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--lime)" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Onboards every founding client personally
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;font-size:12px;color:var(--gray2)">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--lime)" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Based in Mumbai, India
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="s-dark">
+  <div class="wrap">
+    <span class="tag tl rev" style="margin-bottom:14px">What we stand for</span>
+    <h2 class="st rev d1">Built on <span class="hi">three commitments.</span></h2>
+    <div class="value-grid">
+      <div class="value-card rev">
+        <div class="vi"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <h4>Radical Honesty</h4>
+        <p>We don't oversell. ERP is live. Everything else is on the roadmap. We tell you exactly what's ready and what isn't. No vaporware. No false promises.</p>
+      </div>
+      <div class="value-card rev d1">
+        <div class="vi"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+        <h4>Client-First Everything</h4>
+        <p>Every founding client is personally onboarded by the founder. Every issue in the first 30 days is fixed same day. You're not a ticket — you're a partner.</p>
+      </div>
+      <div class="value-card rev d2">
+        <div class="vi"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h4>Built for India</h4>
+        <p>GST-compliant invoicing. PF/ESIC payroll. WhatsApp-first support. AWS Mumbai servers. DPDP Act 2023 compliant. Everything built for how Indian businesses actually work.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section>
+  <div class="wrap ctr">
+    <span class="tag tc rev" style="margin-bottom:14px">Where we are</span>
+    <h2 class="st rev d1">Early. <span class="hi">Intentional. Growing.</span></h2>
+    <p class="sd rev d2" style="margin:0 auto">We're in early client phase — building with our founding partners, not at them.</p>
+    <div class="stats-grid" style="margin-top:48px">
+      <div class="stat-block rev"><div class="stat-num">2025</div><div class="stat-label">Founded</div><div class="stat-src">Mumbai, India</div></div>
+      <div class="stat-block rev d1"><div class="stat-num" style="color:var(--cyan)">5</div><div class="stat-label">Founding client spots</div><div class="stat-src">3 remaining</div></div>
+      <div class="stat-block rev d2"><div class="stat-num">10+</div><div class="stat-label">Industries served</div><div class="stat-src">AMC to medical equipment</div></div>
+      <div class="stat-block rev d3"><div class="stat-num" style="color:var(--amber)">5</div><div class="stat-label">Days to go live</div><div class="stat-src">Guaranteed onboarding</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section class="s-dark" id="roadmap">
+  <div class="wrap">
+    <span class="tag tc rev" style="margin-bottom:14px">Product Roadmap</span>
+    <h2 class="st rev d1">What we're <span class="hi">building next.</span></h2>
+    <p class="sd rev d2">ERP is live. This is what's coming — in order of priority, based on client feedback.</p>
+    <div class="rm-grid">
+      <div class="rm-card rev"><div class="rm-q">Q3 2026</div><h5>Technician Mobile App</h5><p>Native iOS + Android. GPS check-in, photos, digital signatures, parts request, offline mode.</p></div>
+      <div class="rm-card rev d1"><div class="rm-q">Q4 2026</div><h5>AI Automation</h5><p>Auto-invoice on job close, payment reminders via WhatsApp, AMC renewal alerts, smart workflows.</p></div>
+      <div class="rm-card rev d2"><div class="rm-q">Q1 2027</div><h5>Service AI</h5><p>Auto ticket categorisation, technician recommendation, resolution prediction, escalation detection.</p></div>
+      <div class="rm-card rev d3"><div class="rm-q">Q2 2027</div><h5>CRM</h5><p>360° customer view — full job history, AMC contracts, communication logs, renewal tracking.</p></div>
+      <div class="rm-card rev d4"><div class="rm-q">Q3 2027</div><h5>SLA Management</h5><p>Define and enforce SLAs. Real-time compliance, breach alerts, escalation workflows and reports.</p></div>
+      <div class="rm-card rev d5"><div class="rm-q">Q3 2027</div><h5>Enterprise Mobile App</h5><p>Native iOS + Android for Enterprise plan. Included in Enterprise subscription at no extra cost.</p></div>
+    </div>
+    <p style="font-size:13px;color:var(--gray2);margin-top:28px;text-align:center" class="rev">Founding clients get priority access to all upcoming features.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="border-top:1px solid var(--border)">
+  <div class="wrap ctr">
+    <h2 class="st rev" style="font-size:36px">Want to build this <span class="hi">with us?</span></h2>
+    <p class="sd rev d1" style="margin:12px auto 32px">Founding clients shape the product. Your feedback becomes features. 3 spots left.</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap" class="rev d2">
+      <a href="demo.html" class="btn btn-l" style="font-size:15px;padding:15px 32px">Claim a Founding Spot →</a>
+      <a href="contact.html" class="btn btn-o">Get in Touch</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand"><div style="display:flex;align-items:center;gap:10px;margin-bottom:6px"><svg width="28" height="28" viewBox="0 0 100 100" fill="none"><rect width="100" height="100" rx="22" fill="#06080f"/><path d="M36 36 C36 28 43 25 50 29 C57 33 64 31 64 23" stroke="#a3e635" stroke-width="3.5" stroke-linecap="round" fill="none"/><path d="M64 64 C64 72 57 75 50 71 C43 67 36 69 36 77" stroke="#a3e635" stroke-width="3.5" stroke-linecap="round" fill="none"/><circle cx="64" cy="23" r="5.5" fill="#a3e635"/><circle cx="36" cy="77" r="5.5" fill="#38bdf8"/></svg><span style="font-family:var(--fh);font-weight:800;font-size:18px">Cinch<span style="color:var(--lime)">.ai</span></span></div><p style="font-size:12px;color:var(--gray2);margin-top:10px;line-height:1.7;max-width:260px">All-in-one ERP for service, repair, AMC and maintenance businesses across India.</p></div>
+      <div class="foot-col"><h5>Product</h5><a href="product-erp.html">ERP</a><a href="pricing.html">Pricing</a><a href="demo.html">Free Trial</a></div>
+      <div class="foot-col"><h5>Company</h5><a href="about.html">About Us</a><a href="contact.html">Contact</a><a href="privacy-policy.html">Privacy Policy</a><a href="terms-of-service.html">Terms</a></div>
+      <div class="foot-col"><h5>Contact</h5><div class="foot-addr"><a href="mailto:hemrajkmt2576606@gmail.com" style="color:var(--lime)">hemrajkmt2576606@gmail.com</a><br><a href="https://wa.me/918426975309" target="_blank" style="color:var(--lime)">+91 84269 75309</a><br>Dadar, Mumbai — 400014</div></div>
+    </div>
+    <div class="foot-bottom"><span>© 2025 Cinch.AI. All rights reserved.</span><span>Built in Mumbai 🇮🇳</span></div>
+  </div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>

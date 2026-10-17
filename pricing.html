@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pricing — Cinch.AI ERP</title>
+<meta name="description" content="Simple, honest pricing. Starter ₹1,999/mo. Business ₹3,999/mo. Enterprise ₹11,000/mo. 7-day free trial, no credit card.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="bg-canvas"></canvas>
+<div class="toast" id="toast"></div>
+<a class="qc-btn" href="https://wa.me/918426975309?text=Hi%2C%20I%20want%20to%20know%20about%20Cinch.AI%20pricing." target="_blank" rel="noopener">
+  <div class="qc-ping"></div>
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.137.564 4.14 1.543 5.873L.057 23.5a.5.5 0 0 0 .609.61l5.801-1.525A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.651-.51-5.17-1.399l-.371-.22-3.844 1.01 1.024-3.744-.24-.386A9.953 9.953 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+  <span>Quick Connect</span>
+</a>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <svg width="32" height="32" viewBox="0 0 100 100" fill="none"><rect width="100" height="100" rx="22" fill="#06080f"/><path d="M50 10 L82 28 L82 66 L50 84 L18 66 L18 28 Z" stroke="#a3e635" stroke-width="1.8" fill="none" opacity=".4"/><path d="M36 36 C36 28 43 25 50 29 C57 33 64 31 64 23" stroke="#a3e635" stroke-width="3.5" stroke-linecap="round" fill="none"/><path d="M64 64 C64 72 57 75 50 71 C43 67 36 69 36 77" stroke="#a3e635" stroke-width="3.5" stroke-linecap="round" fill="none"/><line x1="36" y1="36" x2="64" y2="64" stroke="#a3e635" stroke-width="2" stroke-linecap="round" opacity=".35"/><circle cx="64" cy="23" r="5.5" fill="#a3e635"/><circle cx="36" cy="77" r="5.5" fill="#38bdf8"/><circle cx="50" cy="50" r="3.2" fill="#f8fafc" opacity=".5"/></svg>
+      <div class="brand-text"><div class="brand-name">Cinch<span>.ai</span></div><div class="brand-tag">Vision Into Power</div></div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <div class="ndrop">
+        <span class="ndrop-lbl">Products ▾</span>
+        <div class="ndrop-menu">
+          <a href="product-erp.html"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#a3e635" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>ERP</a>
+        </div>
+      </div>
+      <a href="pricing.html" class="active">Pricing</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a href="demo.html" class="btn btn-l" style="padding:9px 20px;font-size:12px">Register for Demo</a>
+    </div>
+    <div class="mob-tog" onclick="toggleMob()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="mob-menu" id="mobMenu">
+  <span class="mob-close" onclick="toggleMob()">✕</span>
+  <a href="index.html" onclick="toggleMob()">Home</a>
+  <a href="product-erp.html" onclick="toggleMob()">ERP</a>
+  <a href="pricing.html" onclick="toggleMob()">Pricing</a>
+  <a href="about.html" onclick="toggleMob()">About</a>
+  <a href="contact.html" onclick="toggleMob()">Contact</a>
+  <a href="demo.html" onclick="toggleMob()" style="color:var(--lime)">Register for Demo →</a>
+</div>
+
+<!-- HEADER -->
+<section style="padding-top:140px;padding-bottom:20px">
+  <div class="wrap ctr">
+    <span class="tag tl rev" style="margin-bottom:14px">Pricing</span>
+    <h1 class="st rev d1" style="font-size:48px">Simple, <span class="hi">honest pricing.</span></h1>
+    <p class="sd rev d2" style="margin:0 auto">No hidden fees. No per-module charges. No lock-in. Start with a 7-day free trial — no credit card needed.</p>
+  </div>
+</section>
+
+<!-- PLANS -->
+<section style="padding-top:24px">
+  <div class="wrap">
+    <div class="price-grid">
+      <!-- Starter -->
+      <div class="price-card rev">
+        <div class="pname">Starter</div>
+        <div class="pamt">₹1,999</div>
+        <div class="pper">/month</div>
+        <div class="ptrial">7-day free trial · No card needed</div>
+        <div class="pdesc">Small team — up to 5 users</div>
+        <ul class="pfeats">
+          <li>Up to 5 users</li>
+          <li>Job management (Kanban)</li>
+          <li>Technician portal (web)</li>
+          <li>GST invoice & billing</li>
+          <li>Payroll & attendance</li>
+          <li>Inventory & purchase orders</li>
+          <li>Client management</li>
+          <li>17 reports & live dashboard</li>
+          <li>Email + WhatsApp support</li>
+          <li>5-day guided onboarding</li>
+          <li class="no">Skill-based job matching</li>
+          <li class="no">2FA security</li>
+          <li class="no">Cloud backup</li>
+        </ul>
+        <a href="demo.html"><button class="pcta pc-out">Start Free Trial</button></a>
+      </div>
+      <!-- Business -->
+      <div class="price-card feat rev d1">
+        <div class="pname">Business</div>
+        <div class="pamt" style="color:var(--lime)">₹3,999</div>
+        <div class="pper">/month</div>
+        <div class="ptrial">7-day free trial · No card needed</div>
+        <div class="pdesc">Growing teams — up to 12 users</div>
+        <ul class="pfeats">
+          <li>Up to 12 users</li>
+          <li>Everything in Starter</li>
+          <li>Technician portal (enhanced)</li>
+          <li>Skill-based job matching</li>
+          <li>2FA security</li>
+          <li>Priority same-day support</li>
+          <li>Dedicated team training</li>
+          <li>Monthly performance review</li>
+          <li>Multi-role access control</li>
+          <li>Advanced reporting suite</li>
+          <li class="no">Native mobile app</li>
+          <li class="no">Cloud backup</li>
+        </ul>
+        <a href="demo.html"><button class="pcta pc-lime">Start Free Trial</button></a>
+      </div>
+      <!-- Enterprise -->
+      <div class="price-card rev d2">
+        <div class="pname">Enterprise</div>
+        <div class="pamt">₹11,000</div>
+        <div class="pper">/month</div>
+        <div class="ptrial">7-day free trial · No card needed</div>
+        <div class="pdesc">Larger teams — up to 30 users</div>
+        <ul class="pfeats">
+          <li>Up to 30 users</li>
+          <li>Everything in Business</li>
+          <li>Native Mobile App <span style="font-size:10px;color:var(--amber);font-family:var(--fm);background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.18);padding:1px 6px;border-radius:4px;margin-left:4px">Coming Soon</span></li>
+          <li>Automated cloud backup</li>
+          <li>CSV data backup</li>
+          <li>Dedicated database</li>
+          <li>SLA tracking & alerts</li>
+          <li>API access + custom reports</li>
+          <li>Dedicated account manager</li>
+          <li>Multi-branch support</li>
+        </ul>
+        <a href="contact.html"><button class="pcta pc-out">Contact Sales</button></a>
+      </div>
+    </div>
+
+    <!-- Founding Partner -->
+    <div class="found-box rev">
+      <div>
+        <div class="fb-badge">⭐ Founding Partner Offer — First 5 Clients Only</div>
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:4px;flex-wrap:wrap">
+          <div class="fb-amt">₹1,499 <span style="font-size:16px;color:var(--gray);font-weight:400">for your first month</span></div>
+          <div style="display:flex;gap:4px;align-items:center">
+            <span style="width:10px;height:10px;border-radius:50%;background:var(--red);display:inline-block" title="Claimed"></span>
+            <span style="width:10px;height:10px;border-radius:50%;background:var(--red);display:inline-block" title="Claimed"></span>
+            <span style="width:10px;height:10px;border-radius:50%;background:var(--lime);display:inline-block" title="Available"></span>
+            <span style="width:10px;height:10px;border-radius:50%;background:var(--lime);display:inline-block" title="Available"></span>
+            <span style="width:10px;height:10px;border-radius:50%;background:var(--lime);display:inline-block" title="Available"></span>
+            <span style="font-size:10px;color:var(--lime);font-family:var(--fm);margin-left:4px">3 of 5 spots left</span>
+          </div>
+        </div>
+        <div class="fb-fine">Then ₹1,999/month · 7-day free trial included · No credit card</div>
+        <div class="fb-perks">
+          <span>✓ Full ERP access</span>
+          <span>✓ Personal onboarding</span>
+          <span>✓ 30 days priority support</span>
+          <span>✓ Shape the product roadmap</span>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <a href="demo.html" class="btn btn-l">Claim Founding Offer →</a>
+        <a href="https://wa.me/918426975309?text=Hi%2C%20I%20want%20the%20founding%20partner%20deal%20for%20Cinch.AI" target="_blank" class="btn btn-w" style="justify-content:center">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.137.564 4.14 1.543 5.873L.057 23.5a.5.5 0 0 0 .609.61l5.801-1.525A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.651-.51-5.17-1.399l-.371-.22-3.844 1.01 1.024-3.744-.24-.386A9.953 9.953 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          Quick Connect
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TRIAL WORKS -->
+<section class="s-dark">
+  <div class="wrap ctr">
+    <span class="tag tl rev" style="margin-bottom:14px">7-Day Free Trial</span>
+    <h2 class="st rev d1">Exactly what happens <span class="hi">when you register.</span></h2>
+    <p class="sd rev d2" style="margin:0 auto">No credit card. No auto-charge. No obligation. Just 7 days to see if Cinch.AI is right for you.</p>
+    <div class="trial-grid">
+      <div class="trial-step rev"><div class="trial-num">1</div><h5>You register</h5><p>Fill the form or Quick Connect. Our team responds within 4 business hours.</p></div>
+      <div class="trial-step rev d1"><div class="trial-num">2</div><h5>30-min live demo</h5><p>Our founder personally shows the ERP using your industry's data. Ask anything.</p></div>
+      <div class="trial-step rev d2"><div class="trial-num">3</div><h5>7 days hands-on</h5><p>Your account is set up with your real data. Use it for real work. Support available any time.</p></div>
+      <div class="trial-step rev d3"><div class="trial-num">4</div><h5>Your decision</h5><p>Continue or walk away. No invoice, no pressure. Your data exported either way.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="wrap ctr">
+    <span class="tag tl rev" style="margin-bottom:14px">Pricing FAQ</span>
+    <h2 class="st rev d1">Common <span class="hi">questions about pricing.</span></h2>
+    <div class="faq-wrap">
+      <div class="faq-item rev" onclick="toggleFaq(this)"><div class="faq-q">Will I be charged automatically after the trial?<span class="faq-plus">+</span></div><div class="faq-a"><p>Never. No credit card is required to start. When your trial ends, your account pauses. Our team will reach out to ask if you'd like to continue. You are never billed without your explicit confirmation.</p></div></div>
+      <div class="faq-item rev d1" onclick="toggleFaq(this)"><div class="faq-q">Can I cancel anytime?<span class="faq-plus">+</span></div><div class="faq-a"><p>Yes — cancel anytime with 30 days written notice. No lock-in on monthly plans. Your complete data is exported to CSV before cancellation.</p></div></div>
+      <div class="faq-item rev d2" onclick="toggleFaq(this)"><div class="faq-q">Can I upgrade from Starter to Business later?<span class="faq-plus">+</span></div><div class="faq-a"><p>Yes. You can upgrade at any time. The difference is prorated for the remaining days of your billing month. All your data carries over with zero disruption.</p></div></div>
+      <div class="faq-item rev d3" onclick="toggleFaq(this)"><div class="faq-q">What happens to my data if I cancel?<span class="faq-plus">+</span></div><div class="faq-a"><p>Your complete data — jobs, invoices, employees, clients, inventory — is exported to CSV before cancellation. It's your data. You always have full access to it.</p></div></div>
+      <div class="faq-item rev" onclick="toggleFaq(this)"><div class="faq-q">Is there a discount for annual payment?<span class="faq-plus">+</span></div><div class="faq-a"><p>Annual billing is not currently available as a self-service option but can be arranged for Business and Enterprise plans. Contact us to discuss annual pricing.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px"><svg width="28" height="28" viewBox="0 0 100 100" fill="none"><rect width="100" height="100" rx="22" fill="#06080f"/><path d="M36 36 C36 28 43 25 50 29 C57 33 64 31 64 23" stroke="#a3e635" stroke-width="3.5" stroke-linecap="round" fill="none"/><path d="M64 64 C64 72 57 75 50 71 C43 67 36 69 36 77" stroke="#a3e635" stroke-width="3.5" stroke-linecap="round" fill="none"/><circle cx="64" cy="23" r="5.5" fill="#a3e635"/><circle cx="36" cy="77" r="5.5" fill="#38bdf8"/></svg><span style="font-family:var(--fh);font-weight:800;font-size:18px">Cinch<span style="color:var(--lime)">.ai</span></span></div>
+        <p style="font-size:12px;color:var(--gray2);margin-top:10px;line-height:1.7;max-width:260px">All-in-one ERP for service, repair, AMC and maintenance businesses across India.</p>
+      </div>
+      <div class="foot-col"><h5>Product</h5><a href="product-erp.html">ERP</a><a href="pricing.html">Pricing</a><a href="demo.html">Free Trial</a></div>
+      <div class="foot-col"><h5>Company</h5><a href="about.html">About Us</a><a href="contact.html">Contact</a><a href="privacy-policy.html">Privacy Policy</a><a href="terms-of-service.html">Terms</a></div>
+      <div class="foot-col"><h5>Contact</h5><div class="foot-addr"><a href="mailto:hemrajkmt2576606@gmail.com" style="color:var(--lime)">hemrajkmt2576606@gmail.com</a><br><a href="https://wa.me/918426975309" target="_blank" style="color:var(--lime)">+91 84269 75309</a><br>Dadar, Mumbai — 400014</div></div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 Cinch.AI. All rights reserved.</span><span>Built in Mumbai 🇮🇳</span></div>
+  </div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>

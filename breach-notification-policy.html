@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Data Breach Notification Policy — Cinch AI</title>
+<link rel="stylesheet" href="policy-style.css"/>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">Cinch<span>.</span>AI</a>
+  <a class="nav-back" href="index.html">← Back to Home</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-badge">LEGAL DOCUMENT</div>
+  <h1>Data Breach<br/><span>Notification Policy</span></h1>
+  <div class="hero-meta">
+    <span>Effective: 1 June 2025</span>
+    <span>Last Updated: 1 June 2025</span>
+    <span>DPDPA 2023 S.8(6) Compliant</span>
+  </div>
+</div>
+
+<div class="page-wrap">
+
+  <div class="toc">
+    <h3>Table of Contents</h3>
+    <ol>
+      <li><a href="#s1">Purpose &amp; Scope</a></li>
+      <li><a href="#s2">What Is a Data Breach</a></li>
+      <li><a href="#s3">Breach Detection &amp; Assessment</a></li>
+      <li><a href="#s4">Notification Timelines</a></li>
+      <li><a href="#s5">Notification to Customers</a></li>
+      <li><a href="#s6">Notification to DPBI</a></li>
+      <li><a href="#s7">Notification to Data Principals</a></li>
+      <li><a href="#s8">Post-Breach Review</a></li>
+      <li><a href="#s9">Your Obligations as a Customer</a></li>
+      <li><a href="#s10">Contact</a></li>
+    </ol>
+  </div>
+
+  <div class="policy-section" id="s1">
+    <div class="section-number">01 —</div>
+    <h2>Purpose &amp; Scope</h2>
+    <p>This Data Breach Notification Policy describes how Cinch AI detects, assesses, and responds to personal data breaches, and how we notify affected parties as required under <strong>DPDPA 2023 S.8(6)</strong> and the <strong>SPDI Rules 2011</strong>.</p>
+    <p>This Policy applies to all personal data processed through the Cinch AI platform, including data held in our Supabase database, backup systems, and any data held by Sub-Processors.</p>
+  </div>
+
+  <div class="policy-section" id="s2">
+    <div class="section-number">02 —</div>
+    <h2>What Is a Data Breach</h2>
+    <p>A personal data breach is any accidental or unlawful event that results in:</p>
+    <ul>
+      <li><strong>Unauthorised access</strong> — a person without authorisation gains access to personal data</li>
+      <li><strong>Unauthorised disclosure</strong> — personal data is shared with an unintended recipient</li>
+      <li><strong>Accidental loss or destruction</strong> — personal data is unintentionally lost, corrupted, or destroyed</li>
+      <li><strong>Alteration</strong> — personal data is modified without authorisation</li>
+      <li><strong>Denial of access</strong> — legitimate users are unable to access personal data (e.g., ransomware)</li>
+    </ul>
+    <p>Not all security incidents are data breaches. A server error that does not expose personal data is an incident, not a breach.</p>
+  </div>
+
+  <div class="policy-section" id="s3">
+    <div class="section-number">03 —</div>
+    <h2>Breach Detection &amp; Assessment</h2>
+    <p>Upon becoming aware of a potential breach, Cinch AI will:</p>
+    <ol>
+      <li><strong>Contain:</strong> Take immediate steps to stop ongoing unauthorised access or data loss</li>
+      <li><strong>Preserve evidence:</strong> Preserve logs and evidence for investigation without destroying affected systems</li>
+      <li><strong>Assess severity:</strong> Determine the nature of the breach, categories of data affected, number of Data Principals affected, and likely consequences</li>
+      <li><strong>Classify:</strong> Classify the breach as Low, Medium, or High severity based on the type of data and impact</li>
+    </ol>
+    <table class="policy-table">
+      <thead><tr><th>Severity</th><th>Description</th><th>Example</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Low</strong></td><td>Limited impact; no SPDI exposed; contained quickly</td><td>A single user account password reset email sent to wrong address</td></tr>
+        <tr><td><strong>Medium</strong></td><td>Some personal data exposed; limited number of individuals; quickly contained</td><td>A bug temporarily exposed job records of one company to another company's admin</td></tr>
+        <tr><td><strong>High</strong></td><td>SPDI exposed (Aadhaar, PAN, salary, bank details); large number of individuals; potential for harm</td><td>Database credentials compromised; bulk export of payroll data by unauthorised party</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="policy-section" id="s4">
+    <div class="section-number">04 —</div>
+    <h2>Notification Timelines</h2>
+    <table class="policy-table">
+      <thead><tr><th>Recipient</th><th>Timeline</th><th>Trigger</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Affected Customer (company admin)</strong></td><td>Within <strong>24 hours</strong> of Cinch AI becoming aware</td><td>Any Medium or High severity breach affecting that customer's data</td></tr>
+        <tr><td><strong>Data Protection Board of India (DPBI)</strong></td><td>Within <strong>72 hours</strong> of Cinch AI becoming aware</td><td>Any breach likely to result in harm to Data Principals (once DPBI is operational)</td></tr>
+        <tr><td><strong>Affected Data Principals</strong></td><td>Promptly after DPBI notification, as directed by DPBI</td><td>As required by DPBI direction or when notification is necessary to protect Data Principals</td></tr>
+        <tr><td><strong>Internal record</strong></td><td>Immediately upon detection</td><td>All incidents, regardless of severity</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="policy-section" id="s5">
+    <div class="section-number">05 —</div>
+    <h2>Notification to Customers</h2>
+    <p>When Cinch AI notifies a Customer of a breach, the notification will include:</p>
+    <ul>
+      <li>The date and time the breach was detected</li>
+      <li>The nature of the breach (unauthorised access, accidental disclosure, etc.)</li>
+      <li>The categories of personal data affected (e.g., employee records, payroll data)</li>
+      <li>The approximate number of individuals whose data was affected</li>
+      <li>The likely consequences of the breach</li>
+      <li>The steps Cinch AI has taken or proposes to take to address the breach</li>
+      <li>Recommendations for steps the Customer should take to protect affected individuals</li>
+      <li>The name and contact details of our Grievance Officer</li>
+    </ul>
+    <p>Notification will be sent via email to the registered admin email address and, for High severity breaches, also via WhatsApp.</p>
+    <p>If not all information is available within 24 hours, Cinch AI will send an initial notification with available information and follow up with complete information as soon as reasonably practicable.</p>
+  </div>
+
+  <div class="policy-section" id="s6">
+    <div class="section-number">06 —</div>
+    <h2>Notification to the Data Protection Board of India</h2>
+    <p>Cinch AI will notify the Data Protection Board of India (DPBI) within <strong>72 hours</strong> of becoming aware of a breach that is likely to result in harm to Data Principals, as required under DPDPA 2023 S.8(6).</p>
+    <p>The DPBI notification will be submitted via the DPBI's official online portal (dataprivacy.gov.in) once it is operational, and will contain all information required under the DPDPA 2023 rules.</p>
+    <p>Cinch AI will cooperate fully with any DPBI inquiry or investigation arising from a breach notification.</p>
+  </div>
+
+  <div class="policy-section" id="s7">
+    <div class="section-number">07 —</div>
+    <h2>Notification to Data Principals</h2>
+    <p>Cinch AI will notify affected Data Principals (individual employees and customers whose data was breached) when:</p>
+    <ul>
+      <li>Required by a DPBI direction; or</li>
+      <li>The breach involves High severity SPDI (Aadhaar, PAN, salary, bank details); or</li>
+      <li>Notification is necessary to enable the affected individual to take protective action</li>
+    </ul>
+    <p>Because employee and customer data is entered by the Customer (the Data Fiduciary), Cinch AI will coordinate with the Customer on the content and delivery of Data Principal notifications. The Customer is responsible for contacting their employees and customers using contact details they hold.</p>
+  </div>
+
+  <div class="policy-section" id="s8">
+    <div class="section-number">08 —</div>
+    <h2>Post-Breach Review</h2>
+    <p>Following any Medium or High severity breach, Cinch AI will:</p>
+    <ul>
+      <li>Conduct a root cause analysis within 14 days</li>
+      <li>Implement additional security measures to prevent recurrence</li>
+      <li>Prepare a written incident report</li>
+      <li>Share a summary of lessons learned and remediation actions with affected Customers upon request</li>
+      <li>Update this Policy if procedures need to change</li>
+    </ul>
+  </div>
+
+  <div class="policy-section" id="s9">
+    <div class="section-number">09 —</div>
+    <h2>Your Obligations as a Customer</h2>
+    <p>As a Data Fiduciary under DPDPA 2023, you also have breach notification obligations to your employees and customers. When Cinch AI notifies you of a breach:</p>
+    <ul>
+      <li>You must assess whether you are required to notify your own employees and customers under DPDPA 2023</li>
+      <li>You must cooperate with Cinch AI in containing the breach and assessing its impact</li>
+      <li>You must not publicly disclose information about the breach in a way that could prejudice an ongoing investigation without prior consultation with Cinch AI</li>
+      <li>You should seek independent legal advice about your own obligations as a Data Fiduciary</li>
+    </ul>
+  </div>
+
+  <div class="policy-section" id="s10">
+    <div class="section-number">10 —</div>
+    <h2>Contact — Report a Suspected Breach</h2>
+    <p>If you suspect a data breach or security incident involving the Cinch AI platform, report it immediately:</p>
+    <div class="contact-card">
+      <h4>Security Incident Reporting</h4>
+      <p><strong>Hemraj</strong> — Grievance Officer</p>
+      <p>📧 <a href="mailto:hemrajkmt2576606@gmail.com">hemrajkmt2576606@gmail.com</a> — Subject: <em>"Security Incident Report"</em></p>
+      <p>📞 <a href="tel:+91 84269 75309">+91 84269 75309</a> (call or WhatsApp for urgent matters)</p>
+      <p><strong>Available:</strong> Mon–Sat, 9 AM – 7 PM IST. For critical incidents outside these hours, call directly.</p>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 Cinch AI. Sole Proprietorship — Hemraj. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="terms-of-service.html">Terms of Service</a>
+    <a href="refund-policy.html">Refund Policy</a>
+    <a href="acceptable-use-policy.html">Acceptable Use</a>
+    <a href="cookie-policy.html">Cookie Policy</a>
+    <a href="data-retention-policy.html">Data Retention</a>
+    <a href="data-processing-agreement.html">Data Processing Agreement</a>
+    <a href="breach-notification-policy.html">Breach Notification</a>
+  </div>
+</footer>
+</body>
+</html>

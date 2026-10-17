@@ -1,0 +1,98 @@
+/* policy-style.css — cinch AI Legal Pages */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#03050b;--bg2:#070b15;--bg3:#0a1020;--bg4:#0f1828;--bg5:#141f30;
+  --lime:#a3e635;--lime2:#84cc16;--lime-dim:rgba(163,230,53,.1);--lime-glow:rgba(163,230,53,.08);
+  --cyan:#38bdf8;--cyan-dim:rgba(56,189,248,.08);
+  --amber:#f59e0b;--red:#f87171;--green:#34d399;--purple:#a78bfa;--orange:#fb923c;
+  --white:#eef2f7;--gray:#7a8a9e;--gray2:#4a5a6e;--gray3:#243040;
+  --card:rgba(10,16,32,.7);--border:rgba(163,230,53,.05);--border-h:rgba(163,230,53,.18);
+  --max:820px;
+  --fh:'Space Grotesk',sans-serif;
+  --fb:'Inter',sans-serif;
+  --fm:'JetBrains Mono',monospace;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);background:var(--bg);color:var(--white);overflow-x:hidden;line-height:1.65}
+a{color:var(--lime);text-decoration:none;transition:opacity .2s}
+a:hover{opacity:.75}
+
+/* ── Nav ── */
+nav{position:sticky;top:0;z-index:900;display:flex;align-items:center;justify-content:space-between;padding:14px 28px;background:rgba(3,5,11,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.nav-logo{font-family:var(--fh);font-weight:800;font-size:17px;color:var(--white)}
+.nav-logo span{color:var(--lime)}
+.nav-back{font-size:12px;color:var(--gray);font-weight:500;font-family:var(--fm);letter-spacing:.3px;transition:color .2s}
+.nav-back:hover{color:var(--lime)}
+
+/* ── Hero ── */
+.hero{background:linear-gradient(160deg,var(--bg2) 0%,var(--bg) 100%);border-bottom:1px solid var(--border);padding:72px 28px 56px;text-align:center}
+.hero-badge{display:inline-block;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;font-family:var(--fm);color:var(--lime);background:var(--lime-glow);border:1px solid rgba(163,230,53,.18);padding:5px 14px;border-radius:20px;margin-bottom:20px}
+.hero h1{font-family:var(--fh);font-size:40px;font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:16px}
+.hero h1 span{color:var(--lime)}
+.hero-meta{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:6px 16px;font-size:11px;color:var(--gray2);font-family:var(--fm)}
+.hero-meta span{display:flex;align-items:center;gap:5px}
+.hero-meta span:not(:last-child)::after{content:'·';margin-left:16px;color:var(--gray3)}
+
+/* ── Layout ── */
+.page-wrap{max-width:var(--max);margin:0 auto;padding:48px 28px 80px}
+
+/* ── TOC ── */
+.toc{background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:24px 28px;margin-bottom:40px}
+.toc h3{font-family:var(--fm);font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gray2);margin-bottom:14px}
+.toc ol{padding-left:18px;display:flex;flex-direction:column;gap:6px}
+.toc li{font-size:13px;color:var(--gray)}
+.toc a{color:var(--gray);transition:color .2s}
+.toc a:hover{color:var(--lime)}
+
+/* ── Section ── */
+.policy-section{margin-bottom:48px;padding-bottom:48px;border-bottom:1px solid var(--border)}
+.policy-section:last-child{border-bottom:none}
+.section-number{font-family:var(--fm);font-size:10px;font-weight:600;letter-spacing:2px;color:var(--gray2);margin-bottom:8px;text-transform:uppercase}
+.policy-section h2{font-family:var(--fh);font-size:22px;font-weight:700;margin-bottom:16px;letter-spacing:-.4px}
+.policy-section h3{font-family:var(--fh);font-size:15px;font-weight:700;margin:20px 0 10px;color:var(--white)}
+.policy-section p{font-size:14px;color:var(--gray);line-height:1.8;margin-bottom:12px}
+.policy-section ul,.policy-section ol{padding-left:20px;display:flex;flex-direction:column;gap:8px;margin-bottom:12px}
+.policy-section li{font-size:14px;color:var(--gray);line-height:1.7}
+.policy-section strong{color:var(--white);font-weight:600}
+
+/* ── Boxes ── */
+.warn-box{background:rgba(248,113,113,.06);border:1px solid rgba(248,113,113,.18);border-radius:12px;padding:18px 22px;margin-bottom:24px}
+.warn-box p{font-size:13px;color:#fca5a5;margin:0;line-height:1.7}
+.info-box{background:var(--lime-glow);border:1px solid rgba(163,230,53,.15);border-radius:12px;padding:18px 22px;margin:16px 0}
+.info-box p{font-size:13px;color:var(--white);margin:0;line-height:1.7}
+.important-box{background:rgba(56,189,248,.05);border:1px solid rgba(56,189,248,.15);border-radius:12px;padding:18px 22px;margin:16px 0}
+.important-box p{font-size:13px;color:#bae6fd;margin:0;line-height:1.7}
+
+/* ── Table ── */
+.policy-table{width:100%;border-collapse:collapse;font-size:13px;border-radius:12px;overflow:hidden;border:1px solid var(--border);margin:14px 0}
+.policy-table thead tr{background:var(--bg3)}
+.policy-table th{padding:12px 16px;text-align:left;font-family:var(--fm);font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.8px;color:var(--gray2)}
+.policy-table td{padding:12px 16px;border-top:1px solid var(--border);color:var(--gray);vertical-align:top;line-height:1.6}
+.policy-table tr:hover td{background:rgba(163,230,53,.02)}
+
+/* ── Contact card ── */
+.contact-card{background:var(--bg2);border:1px solid var(--border-h);border-radius:14px;padding:24px 28px}
+.contact-card h4{font-family:var(--fh);font-size:14px;font-weight:700;margin-bottom:12px;color:var(--lime)}
+.contact-card p{font-size:14px;color:var(--gray);margin-bottom:6px}
+.contact-card a{color:var(--lime)}
+
+/* ── Footer ── */
+footer{border-top:1px solid var(--border);padding:36px 28px;text-align:center}
+footer p{font-size:12px;color:var(--gray2);margin-bottom:16px}
+.footer-links{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 20px}
+.footer-links a{font-size:11px;color:var(--gray2);font-family:var(--fm);letter-spacing:.3px;transition:color .2s}
+.footer-links a:hover{color:var(--lime)}
+
+/* ── Responsive ── */
+@media(max-width:640px){
+  .hero{padding:56px 18px 40px}
+  .hero h1{font-size:28px;letter-spacing:-1px}
+  .page-wrap{padding:32px 18px 60px}
+  nav{padding:12px 18px}
+  footer{padding:28px 18px}
+  .policy-table{font-size:12px}
+  .policy-table th,.policy-table td{padding:10px 12px}
+  .f2{grid-template-columns:1fr}
+}
